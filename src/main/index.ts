@@ -7,6 +7,9 @@ import Logger from '../../shared/logger'
 const logger = new Logger()
 
 export default async function main() {
+  logger.info('Checking for updates')
+  require('update-electron-app')()
+
   logger.info('Launching Dashboard')
 
   helpers.getPlatform()
